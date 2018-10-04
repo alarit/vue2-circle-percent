@@ -15,10 +15,10 @@ yarn serve
 ## Params
 vue2-circle-percent exposes following params:
 * done: **Required** Number type, it represents the completed part of the circle
-* undone: **Required** Number type, it represents the uncompleted part of the circle
+* missing: **Required** Number type, it represents the uncompleted part of the circle
 * size: **Default 100** Number type, you should use an Integer ideally between 25 and 100
 * arcColor: **Default #00c71b** String type, color associated to _done_ param 
-* bgCircleColor: **Default #00cc1b33** String type, color associated to _undone_ param
+* bgCircleColor: **Default #00cc1b33** String type, color associated to _missing_ param
 
 ## Example
 ```
