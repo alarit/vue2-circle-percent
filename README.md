@@ -24,7 +24,7 @@ vue2-circle-percent exposes following params:
 ```
 <template>
     <div>
-        <circular-percentage size="80" :done="60" :undone="30" arc-color="#ff0000" bgCircleColor="#ff000033" />
+        <circular-percentage size="80" :done="60" :undone="30" arcColor="#ff0000" bgCircleColor="#ff000033" />
     </div>
 </template>
   
