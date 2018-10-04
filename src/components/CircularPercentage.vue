@@ -22,7 +22,7 @@
                 type: Number,
                 required: true
             },
-            undone: {
+            missing: {
                 type: Number,
                 required: true
             },
@@ -37,7 +37,7 @@
         },
         computed: {
             percentage() {
-                return parseFloat(100 / (this.done + this.undone) * this.done).toFixed(1);
+                return parseFloat(100 / (this.done + this.missing) * this.done).toFixed(1);
             },
             dashArray() {
                 let perc = this.size / 100 * this.percentage;

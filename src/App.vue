@@ -1,16 +1,16 @@
 <template>
   <div id="app">
       <div class="one-fourth">
-          <circular-percentage :size="size" :done="3" :undone="1" arc-color="#0000ff" bgCircleColor="#0000bb33" />
+          <circular-percentage :size="size" :done="3" :missing="1" arcColor="#0000ff" bgCircleColor="#0000bb33" />
       </div>
       <div class="one-fourth">
-        <circular-percentage size="80" :done="60" :undone="30" arc-color="#ff0000" bgCircleColor="#ff000033" />
+        <circular-percentage size="80" :done="60" :missing="30" arcColor="#ff0000" bgCircleColor="#ff000033" />
       </div>
       <div class="one-fourth">
-        <circular-percentage size="60" :done=done :undone=undone />
+        <circular-percentage size="60" :done=done :missing=missing />
       </div>
       <div class="one-fourth">
-          <circular-percentage size="40" :done="90" :undone="10" arc-color="#fff000" bgCircleColor="#fff00033" />
+          <circular-percentage size="40" :done="90" :missing="10" arcColor="#fff000" bgCircleColor="#fff00033" />
       </div>
   </div>
 </template>
@@ -27,7 +27,7 @@ export default {
         return {
             size: 100,
             done: 5,
-            undone: 20
+            missing: 20
       }
     }
 }
