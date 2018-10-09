@@ -79,7 +79,6 @@
 
 <style scoped>
     .flex-wrapper {
-        display: flex;
         flex-flow: row nowrap;
     }
 
