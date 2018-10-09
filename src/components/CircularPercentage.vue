@@ -1,6 +1,6 @@
 <template>
     <div>
-        <div class="flex-wrapper">
+        <div class="flex-wrapper" :title=circleTitle>
             <svg :viewBox=viewBox class="circular-chart">
                 <path class="circle" :style=circleStroke :d=circlePath />
                 <path class="completed-arc" :style=arcStroke :stroke-dasharray=dashArray :d=circlePath />
@@ -40,7 +40,7 @@
                 return parseFloat(100 / (this.done + this.missing) * this.done).toFixed(1);
             },
             dashArray() {
-                let perc = this.size / 100 * this.percentage;
+                const perc = this.size / 100 * this.percentage;
                 return perc + ', ' + this.size;
             },
             radius() {
@@ -56,10 +56,9 @@
                 return '0 0 ' + this.box + ' ' + this.box;
             },
             circlePath() {
-                return 'M' + (this.box / 2) + ' 2.08' /*([this.box - this.diameter] / 2)*/
+                return 'M' + (this.box / 2) + ' 2.08'
                     + ' a ' + this.radius + ' ' + this.radius + ' 0 0 1 0 ' + this.diameter
                     + ' a ' + this.radius + ' ' + this.radius + ' 0 0 1 0 -' + this.diameter;
-
             },
             textSize() {
                 return this.size / 11;
@@ -72,6 +71,9 @@
             },
             circleStroke() {
                 return 'stroke: ' + this.bgCircleColor;
+            },
+            circleTitle() {
+                return this.done + '/' + (this.missing + this.done);
             }
         }
     }
